@@ -1,0 +1,60 @@
+<UserControl
+    x:Class="ConsoleUI3.Views.MainView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    x:DataType="vm:MainViewModel"
+    mc:Ignorable="d">
+
+    <UserControl.Styles>
+        <Style Selector="Button:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="LightCoral" />
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="Background" Value="LightBlue" />
+        </Style>
+    </UserControl.Styles>
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+
+    <StackPanel>
+        <TextBlock
+            Margin="20"
+            FontSize="20"
+            FontWeight="600"
+            Foreground="Black"
+            Text="Mitt testprogram" />
+        <Label
+            Margin="10,0,0,0"
+            Content="Spelnamn:"
+            Foreground="Black" />
+        <TextBox
+            Margin="10,5,10,5"
+            Background="LightGray"
+            Text="{Binding TbxInputText}" />
+        <Button
+            Margin="10,5,15,15"
+            Classes="btn"
+            Command="{Binding AddItemCommand}"
+            CommandParameter=""
+            Content="lägg till spel" />
+        <ListBox
+            Margin="20"
+            BorderBrush="Black"
+            BorderThickness="2"
+            Foreground="Black"
+            ItemsSource="{Binding GameList}" />
+    </StackPanel>
+
+</UserControl>
