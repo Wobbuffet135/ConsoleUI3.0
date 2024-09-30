@@ -18,4 +18,6 @@ public partial class MainViewModel : ViewModelBase
     {
         GameList.Add(TbxInputText);
     }
+
+    //random kommentar så den låter mig skriva ett commit message
 }
