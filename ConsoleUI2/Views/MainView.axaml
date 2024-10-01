@@ -18,51 +18,58 @@
     </Design.DataContext>
 
     <StackPanel>
+
+        <!--Fältet längst upp med färger, bra exempel hur Grid används. Kommer vara viktigt framöver.
+        * tar upp oanvänd plats. Bra att jämföra med CSS Flexbox.   -->
         <Grid Background="Orange" Height="40" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
             <Rectangle Grid.Column="0" Fill="Red" Width="40" ></Rectangle>
             <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
 
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
-                <Label FontWeight="Black">AVALONIA</Label>
+                <Label FontWeight="Bold">AVALONIA</Label>
                 <Label>ConsoleUI</Label>
             </StackPanel>
             <Rectangle Grid.Column="3" Fill="Green" Width="40"></Rectangle>
             <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
         </Grid>
+
+        <!--Titel-->
         <TextBlock
             Margin="20"
             FontSize="20"
             FontWeight="600"
             Foreground="Black"
             Text="Mitt testprogram" />
-        <Label
-            Margin="10,0,0,0"
-            Content="Spelnamn:"
-            Foreground="Black" />
+
+        <!--Label och input för att ange spelnamn-->
+        <Label Margin="10,0,0,0" Content="Spelnamn:"/>
         <TextBox
             Margin="10,5,10,5"
             Background="LightGray"
-            Text="{Binding TbxInputText}" />
+            Text="{Binding TbxInputText}"
+            Watermark="Ange spelnamn..."/>
+
+        <!--StackPanel för knapparnas horisontella layout-->
         <StackPanel Orientation="Horizontal">
             <Button
                 Margin="10,5,5,15"
-                Classes="btn"
                 Command="{Binding AddItemCommand}"
-                CommandParameter=""
                 Content="Lägg till spel" />
             <Button
                 Margin="5,5,15,15"
-                Classes="btn"
                 Command="{Binding RemoveItemCommand}"
-                CommandParameter=""
                 Content="Radera valt spel" />
         </StackPanel>
+
+        <!--Felmeddelande som visas när man inte har valt spel, eller när listan är tom.-->
+        <Label Margin="10,-10,0,-10" Content="Välj ett spel att radera" Foreground="Red" IsVisible="{Binding ErrorAlertIsVisible}" />
+
+        <!--Lista med spel man har lagt till-->
         <ListBox
             MaxHeight="400"
             Margin="20"
             BorderBrush="Black"
             BorderThickness="2"
-            Foreground="Black"
             ItemsSource="{Binding GameList}"
             SelectedIndex="{Binding SelectedGameIndex}"/>
     </StackPanel>

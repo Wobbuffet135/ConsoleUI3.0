@@ -15,6 +15,9 @@ ObservableCollection<string> _gameList = new();
     [ObservableProperty]
     int _selectedGameIndex;
 
+    [ObservableProperty]
+    bool _errorAlertIsVisible = false;
+
 
     [RelayCommand]
     private void AddItem()
@@ -25,6 +28,17 @@ ObservableCollection<string> _gameList = new();
     [RelayCommand]
     private void RemoveItem()
     {
-    GameList.RemoveAt(SelectedGameIndex);
+        if (GameList.Count > 0 && SelectedGameIndex != -1 )
+        {
+            int tempIndex = SelectedGameIndex;
+            ErrorAlertIsVisible = false;
+            GameList.RemoveAt(SelectedGameIndex);
+            SelectedGameIndex = tempIndex - 1;
+        }
+            
+        else
+        {
+            ErrorAlertIsVisible = true;
+        }
     }
     }
