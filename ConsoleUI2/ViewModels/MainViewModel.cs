@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Avalonia.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 
@@ -18,6 +19,8 @@ ObservableCollection<string> _gameList = new();
     [ObservableProperty]
     bool _errorAlertIsVisible = false;
 
+    [ObservableProperty]
+    Image _coverArt;
 
     [RelayCommand]
     private void AddItem()
