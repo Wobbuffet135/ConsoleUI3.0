@@ -11,29 +11,50 @@
     mc:Ignorable="d">
     <Design.DataContext>
         <!--
-        This only sets the DataContext for the previewer in an IDE,
-        to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
         -->
         <vm:MainViewModel />
     </Design.DataContext>
 
     <StackPanel>
 
-        <!--Fältet längst upp med färger, bra exempel hur Grid används. Kommer vara viktigt framöver.
-        * tar upp oanvänd plats. Bra att jämföra med CSS Flexbox.   -->
-        <Grid Background="Orange" Height="40" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
-            <Rectangle Grid.Column="0" Fill="Red" Width="40" ></Rectangle>
-            <Rectangle Grid.Column="1" Fill="Blue" Width="40"></Rectangle>
+        <!--
+            Fältet längst upp med färger, bra exempel hur Grid används. Kommer vara viktigt framöver.
+            * tar upp oanvänd plats. Bra att jämföra med CSS Flexbox.
+        -->
+        <Grid
+            Height="40"
+            Background="Orange"
+            ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+            <Rectangle
+                Grid.Column="0"
+                Width="40"
+                Fill="Red" />
+            <Rectangle
+                Grid.Column="1"
+                Width="40"
+                Fill="Blue" />
 
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2">
+            <StackPanel
+                Grid.Column="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Horizontal">
                 <Label FontWeight="Bold">AVALONIA</Label>
                 <Label>ConsoleUI</Label>
             </StackPanel>
-            <Rectangle Grid.Column="3" Fill="Green" Width="40"></Rectangle>
-            <Rectangle Grid.Column="4" Fill="Yellow" Width="40"></Rectangle>
+            <Rectangle
+                Grid.Column="3"
+                Width="40"
+                Fill="Green" />
+            <Rectangle
+                Grid.Column="4"
+                Width="40"
+                Fill="Yellow" />
         </Grid>
 
-        <!--Titel-->
+        <!--  Titel  -->
         <TextBlock
             Margin="20"
             FontSize="20"
@@ -41,15 +62,15 @@
             Foreground="Black"
             Text="Mitt testprogram" />
 
-        <!--Label och input för att ange spelnamn-->
-        <Label Margin="10,0,0,0" Content="Spelnamn:"/>
+        <!--  Label och input för att ange spelnamn  -->
+        <Label Margin="10,0,0,0" Content="Spelnamn:" />
         <TextBox
             Margin="10,5,10,5"
             Background="LightGray"
             Text="{Binding TbxInputText}"
-            Watermark="Ange spelnamn..."/>
+            Watermark="Ange spelnamn..." />
 
-        <!--StackPanel för knapparnas horisontella layout-->
+        <!--  StackPanel för knapparnas horisontella layout  -->
         <StackPanel Orientation="Horizontal">
             <Button
                 Margin="10,5,5,15"
@@ -61,17 +82,21 @@
                 Content="Radera valt spel" />
         </StackPanel>
 
-        <!--Felmeddelande som visas när man inte har valt spel, eller när listan är tom.-->
-        <Label Margin="10,-10,0,-10" Content="Välj ett spel att radera" Foreground="Red" IsVisible="{Binding ErrorAlertIsVisible}" />
+        <!--  Felmeddelande som visas när man inte har valt spel, eller när listan är tom.  -->
+        <Label
+            Margin="10,-10,0,-10"
+            Content="Välj ett spel att radera"
+            Foreground="Red"
+            IsVisible="{Binding ErrorAlertIsVisible}" />
 
-        <!--Lista med spel man har lagt till-->
+        <!--  Lista med spel man har lagt till  -->
         <ListBox
             MaxHeight="400"
             Margin="20"
             BorderBrush="Black"
             BorderThickness="2"
             ItemsSource="{Binding GameList}"
-            SelectedIndex="{Binding SelectedGameIndex}"/>
+            SelectedIndex="{Binding SelectedGameIndex}" />
     </StackPanel>
 
 </UserControl>

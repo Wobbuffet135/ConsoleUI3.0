@@ -1,12 +1,16 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:ConsoleUI2.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:views="clr-namespace:ConsoleUI2.Views"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="ConsoleUI2.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="ConsoleUI2">
-        <views:MainView />
+<Window
+    x:Class="ConsoleUI2.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="clr-namespace:ConsoleUI2.Views"
+    xmlns:vm="using:ConsoleUI2.ViewModels"
+    Title="ConsoleUI2"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Icon="/Assets/avalonia-logo.ico"
+    mc:Ignorable="d">
+    <views:MainView />
 </Window>

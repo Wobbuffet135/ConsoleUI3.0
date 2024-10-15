@@ -25,6 +25,7 @@ ObservableCollection<string> _gameList = new();
     [RelayCommand]
     private void AddItem()
     {
+
     GameList.Add(TbxInputText);
     }
 
