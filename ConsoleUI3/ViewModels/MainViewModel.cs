@@ -1,48 +1,29 @@
-﻿namespace ConsoleUI3.ViewModels;
+﻿using System;
+
+namespace ConsoleUI3.ViewModels;
 using Avalonia.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
-
+using System;
 
 public partial class MainViewModel : ViewModelBase
 {
     [ObservableProperty]
-    ObservableCollection<string> _gameList = new();
+    private ViewModelBase _CurrentViewModel = new HuvudmenyViewModel();
 
-    [ObservableProperty]
-    string _tbxInputText = "";
-
-    [ObservableProperty]
-    int _selectedGameIndex;
-
-    [ObservableProperty]
-    bool _errorAlertIsVisible = false;
-
-    [ObservableProperty]
-    Image _coverArt;
 
     [RelayCommand]
-    private void AddItem()
+    private void ActivateView(string deviceName)
     {
 
-        GameList.Add(TbxInputText);
+        CurrentViewModel = deviceName switch
+        {
+            // get it from dependency injection
+            "Huvudmeny" => new HuvudmenyViewModel(),
+
+            _ => throw new ArgumentException($"unknown device name {deviceName}")
+        };
     }
 
-    [RelayCommand]
-    private void RemoveItem()
-    {
-        if (GameList.Count > 0 && SelectedGameIndex != -1)
-        {
-            int tempIndex = SelectedGameIndex;
-            ErrorAlertIsVisible = false;
-            GameList.RemoveAt(SelectedGameIndex);
-            SelectedGameIndex = tempIndex - 1;
-        }
-
-        else
-        {
-            ErrorAlertIsVisible = true;
-        }
-    }
 }

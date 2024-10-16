@@ -1,0 +1,98 @@
+﻿<UserControl 
+    x:Class="ConsoleUI3.Views.HuvudmenyView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:DataType="vm:HuvudmenyViewModel">
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:HuvudmenyViewModel />
+    </Design.DataContext>
+    
+    <StackPanel>
+        <Viewbox>
+            <Grid Height="40" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                <Rectangle
+                    Grid.Column="0"
+                    Width="40"
+                    Fill="LightGray" />
+                <Rectangle Grid.Column="1" Fill="DarkGray" />
+                <Image
+                    Grid.Column="1"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/house-icon.png" />
+                <Rectangle
+                    Grid.Column="2"
+                    Width="80"
+                    Fill="DarkGray" />
+                <Viewbox Grid.Column="2" Width="80">
+                    <TextBlock Background="DarkGray" TextWrapping="Wrap">
+                        Home
+                    </TextBlock>
+                </Viewbox>
+                <TextBlock
+                    Grid.Column="3"
+                    Width="40"
+                    Background="Black"
+                    Foreground="White">
+                    boxes
+                </TextBlock>
+                <Rectangle
+                    Grid.Column="4"
+                    Width="40"
+                    Fill="DarkGray" />
+                <Image
+                    Grid.Column="4"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/gear-icon-2048x2048-5lk2g86a.png" />
+
+                <Polygon
+                    Grid.Column="5"
+                    Fill="Black"
+                    Points="0,0 80,0 0,40"
+                    Stroke="Black" />
+                <Rectangle
+                    Grid.Column="6"
+                    Width="160"
+                    Fill="White" />
+                <Polygon
+                    Grid.Column="7"
+                    Fill="Black"
+                    Points="0,0 80,0 80,40"
+                    Stroke="Black" />
+                <Rectangle
+                    Grid.Column="8"
+                    Width="40"
+                    Fill="DarkGray" />
+                <Image
+                    Grid.Column="8"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/wifi-logo.png" />
+                <TextBlock
+                    Grid.Column="9"
+                    Width="80"
+                    Background="Black"
+                    Foreground="White">
+                    clock
+                </TextBlock>
+                <TextBlock
+                    Grid.Column="10"
+                    Width="80"
+                    Background="DarkGray">
+                    volume
+                </TextBlock>
+                <Rectangle
+                    Grid.Column="11"
+                    Width="40"
+                    Fill="LightGray" />
+            </Grid>
+        </Viewbox>
+    </StackPanel>
+    
+</UserControl>
