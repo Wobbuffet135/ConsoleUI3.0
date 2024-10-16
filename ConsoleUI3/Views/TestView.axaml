@@ -16,9 +16,9 @@
         <vm:TestViewModel />
     </Design.DataContext>
     
-    <StackPanel Orientation="Horizontal">
+    <DockPanel LastChildFill="False" Width="700" Height="700">
         <Label Content="Det här är TestView"/>
-        <Rectangle Classes.triggered="{Binding AnimationOn}" Fill="Fuchsia" Width="100" Height="100" >
+        <Rectangle DockPanel.Dock="Left" Classes.triggered="{Binding AnimationOn}" Fill="Fuchsia" Width="100" Height="100" >
             <Rectangle.Styles>
                 <Style Selector="Rectangle.triggered">
                     <Style.Animations>
@@ -27,9 +27,17 @@
                             <KeyFrame Cue="0%">
                                 <Setter Property="Margin" Value="0,0,0,0"/>
                             </KeyFrame>
+                            
+                            <KeyFrame Cue="25%">
+                                <Setter Property="Margin" Value="200,0,0,0"/>
+                            </KeyFrame>
 
                             <KeyFrame Cue="50%">
-                                <Setter Property="Margin" Value="200,0, 0,0"/>
+                                <Setter Property="Margin" Value="200,200, 0,0"/>
+                            </KeyFrame>
+                            
+                            <KeyFrame Cue="75%">
+                                <Setter Property="Margin" Value="0,200,0,0"/>
                             </KeyFrame>
                             
                             <KeyFrame Cue="100%">
@@ -42,8 +50,8 @@
             </Rectangle.Styles>
         </Rectangle>
         
-        <ToggleButton Background="Fuchsia" IsChecked="{Binding AnimationOn}" Width="100" Height="35" Content="klicka för $$$"/>
-    </StackPanel>
+        <ToggleButton DockPanel.Dock="Right" Background="Fuchsia" IsChecked="{Binding AnimationOn}" Content="klicka för $$$"/>
+    </DockPanel>
 
 
     
