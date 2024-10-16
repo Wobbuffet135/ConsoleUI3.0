@@ -26,9 +26,16 @@
         <!--Menyn dockad längst upp-->
         <ContentControl DockPanel.Dock="Top" Content="{Binding CurrentViewModel}" />
         
-        <Viewbox DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Stretch="None">
+        <Viewbox VerticalAlignment="Bottom" Stretch="None">
             <Label Content='Exempel på control som alltid visas oavsätt "meny"' Background='Fuchsia'/>
         </Viewbox>
+        
+        <StackPanel VerticalAlignment="Bottom">
+            <Button Command="{Binding ActivateViewCommand}" CommandParameter="Test" Background="Fuchsia" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 0 0" Content="Byta view till TestView"></Button>
+            <Button Command="{Binding ActivateViewCommand}" CommandParameter="Huvudmeny" Background="Fuchsia" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 0 0" Content="Byta till HuvudmenyView"></Button>
+            
+        </StackPanel>
+        
         
     </DockPanel>
     

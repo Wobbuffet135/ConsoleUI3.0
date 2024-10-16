@@ -21,6 +21,7 @@ public partial class MainViewModel : ViewModelBase
         {
             // get it from dependency injection - ingen aning vad det här betyder lol
             "Huvudmeny" => new HuvudmenyViewModel(),
+            "Test" => new TestViewModel(),
 
             
             //sker om man försöker byta till ett fönster som inte finns
