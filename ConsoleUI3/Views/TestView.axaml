@@ -16,7 +16,7 @@
         <vm:TestViewModel />
     </Design.DataContext>
     
-    <DockPanel LastChildFill="False" Width="700" Height="700">
+    <DockPanel LastChildFill="False" Width="700" Height="600">
         <Label Content="Det här är TestView"/>
         <Rectangle DockPanel.Dock="Left" Classes.triggered="{Binding AnimationOn}" Fill="Fuchsia" Width="100" Height="100" >
             <Rectangle.Styles>
