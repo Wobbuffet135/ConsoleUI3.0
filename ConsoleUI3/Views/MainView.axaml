@@ -17,11 +17,10 @@
         <vm:MainViewModel />
     </Design.DataContext>
     
-    <!--
+        <!--
         OBS!!! : Genom att lägga <ContentControl> i t.ex en stackpanel med andra controls kan man alltid visa saker på
-        skärmen, oavsätt vilken sida man är inne på. kan vara användbart för t.ex snabbvalsknappar eller en "tillbaka"
-        knapp som visas oavsätt vilken inställning man är inne på.
-        
+        skärmen, oavsätt vilken sida man är inne på. kan vara användbart för t.ex snabbvalsknappar, felmeddelande
+        eller en "tillbaka" knapp som visas oavsätt vilken inställning man är inne på.
         -->
     <DockPanel>
         <!--Menyn dockad längst upp-->
