@@ -1,6 +1,9 @@
-﻿namespace ConsoleUI3.ViewModels;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-public class TestViewModel : ViewModelBase
+namespace ConsoleUI3.ViewModels;
+
+public partial class TestViewModel : ViewModelBase
 {
-    
+    [ObservableProperty] private bool _animationOn = false;     
+
 }
