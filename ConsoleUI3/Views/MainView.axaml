@@ -26,6 +26,7 @@
             Fältet längst upp med färger, bra exempel hur Grid används. Kommer vara viktigt framöver.
             * tar upp oanvänd plats. Bra att jämföra med CSS Flexbox.
         -->
+		<!--
         <Grid
             Height="40"
             Background="Orange"
@@ -56,6 +57,92 @@
                 Width="40"
                 Fill="Yellow" />
         </Grid>
+		-->
+
+		<Grid
+			Height="40"
+            Background="Gray"
+            ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, *, Auto, Auto, Auto, Auto, Auto">
+			<Rectangle
+				Grid.Column="0"
+				Width="40"
+				Fill="LightGray"
+				/>
+			<TextBlock
+				Grid.Column="1"
+				Width="40"
+				Background="Black"
+				Foreground="White">
+				House
+			</TextBlock>
+			<Rectangle
+				Grid.Column="2"
+				Width="80"
+				Fill="DarkGray"/>
+			<Viewbox 
+				Grid.Column="2"
+				Width="80">
+			<TextBlock
+				TextWrapping="Wrap"
+				Background="DarkGray"
+				FontSize="">
+				Home
+			</TextBlock>
+			</Viewbox>
+			<TextBlock
+				Grid.Column="3"
+				Width="40"
+				Background="Black"
+				Foreground="White">
+				boxes
+			</TextBlock>
+			<TextBlock
+				Grid.Column="4"
+				Width="40"
+				Background="DarkGray">
+				Gear
+			</TextBlock>
+			<TextBlock
+				Grid.Column="5"
+				Width="80"
+				Background="Black"
+				Foreground="White">
+				triangle
+			</TextBlock>
+			<Rectangle
+				Grid.Column="6"
+				Fill="White"/>
+			<TextBlock
+				Grid.Column="7"
+				Width="80"
+				Background="Black"
+				Foreground="White">
+				triangle
+			</TextBlock>
+			<TextBlock
+				Grid.Column="8"
+				Width="40"
+				Background="DarkGray">
+				wifi
+			</TextBlock>
+			<TextBlock
+				Grid.Column="9"
+				Width="80"
+				Background="Black"
+				Foreground="White">
+				clock
+			</TextBlock>
+			<TextBlock
+				Grid.Column="10"
+				Width="80"
+				Background="DarkGray">
+				volume
+			</TextBlock>
+			<Rectangle
+				Grid.Column="11"
+				Width="40"
+				Fill="LightGray"/>
+		</Grid>
 
         <!--  Titel  -->
         <TextBlock
