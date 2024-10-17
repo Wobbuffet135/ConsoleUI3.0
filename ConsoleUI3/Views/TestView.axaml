@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
+    xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
     x:DataType="vm:TestViewModel">
     
@@ -18,9 +19,11 @@
     
     <DockPanel LastChildFill="False" Width="700" Height="600">
         <Label Content="Det här är TestView"/>
-        <Rectangle DockPanel.Dock="Left" Classes.triggered="{Binding AnimationOn}" Fill="Fuchsia" Width="100" Height="100" >
-            <Rectangle.Styles>
-                <Style Selector="Rectangle.triggered">
+        <Panel DockPanel.Dock="Left" Width="100" Height="100" Classes.triggered="{Binding AnimationOn}" >
+            <Image asyncImageLoader:ImageLoader.Source="https://i.pinimg.com/236x/bc/ba/07/bcba07293739bdd9cc0ab3a174ef6f29.jpg"/>
+        </Panel>
+            <Panel.Styles>
+                <Style Selector="Panel.triggered">
                     <Style.Animations>
                         <Animation Duration="0:0:3" IterationCount="INFINITE">
                             
@@ -47,8 +50,7 @@
                         </Animation>
                     </Style.Animations>
                 </Style>
-            </Rectangle.Styles>
-        </Rectangle>
+            </Panel.Styles>
         
         <ToggleButton DockPanel.Dock="Right" Background="Fuchsia" IsChecked="{Binding AnimationOn}" Content="klicka för $$$"/>
     </DockPanel>
