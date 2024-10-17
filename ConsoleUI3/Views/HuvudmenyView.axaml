@@ -15,8 +15,20 @@
         <vm:HuvudmenyViewModel />
     </Design.DataContext>
     
-    <StackPanel>
-        <Viewbox>
+    <Panel>
+            <Viewbox Stretch="Uniform" VerticalAlignment="Center">
+                <StackPanel Background="Fuchsia" Orientation="Horizontal" VerticalAlignment="Top" >
+                    <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20"></DockPanel>
+                    <DockPanel Background="Blue" Width="150" Height="150" VerticalAlignment="Center" Margin="20"></DockPanel>
+                    <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20"></DockPanel>
+                    <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20"></DockPanel>
+                    <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20"></DockPanel>
+                </StackPanel>
+            </Viewbox>
+
+        
+        
+        <Viewbox VerticalAlignment="Top">
             <Grid Height="320" ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
 				  RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
                 <Rectangle
@@ -153,6 +165,7 @@
                     Stroke="Black" />
             </Grid>
         </Viewbox>
-    </StackPanel>
+        
+    </Panel>
     
 </UserControl>

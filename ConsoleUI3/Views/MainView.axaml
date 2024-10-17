@@ -22,9 +22,9 @@
         skärmen, oavsätt vilken sida man är inne på. kan vara användbart för t.ex snabbvalsknappar, felmeddelande
         eller en "tillbaka" knapp som visas oavsätt vilken inställning man är inne på.
         -->
-    <DockPanel>
+    <Panel>
         <!--Menyn dockad längst upp-->
-        <ContentControl DockPanel.Dock="Top" Content="{Binding CurrentViewModel}" />
+        <ContentControl Content="{Binding CurrentViewModel}" />
         
         <Viewbox VerticalAlignment="Bottom" Stretch="None">
             <Label Content='Exempel på control som alltid visas oavsätt "meny"' Background='Fuchsia'/>
@@ -37,6 +37,6 @@
         </StackPanel>
         
         
-    </DockPanel>
+    </Panel>
     
 </UserControl>

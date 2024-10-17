@@ -17,43 +17,47 @@
         <vm:TestViewModel />
     </Design.DataContext>
     
-    <DockPanel LastChildFill="False" Width="700" Height="600">
-        <Label Content="Det här är TestView"/>
-        <Panel DockPanel.Dock="Left" Width="100" Height="100" Classes.triggered="{Binding AnimationOn}" >
-            <Image asyncImageLoader:ImageLoader.Source="https://i.pinimg.com/236x/bc/ba/07/bcba07293739bdd9cc0ab3a174ef6f29.jpg"/>
-        </Panel>
-            <Panel.Styles>
-                <Style Selector="Panel.triggered">
-                    <Style.Animations>
-                        <Animation Duration="0:0:3" IterationCount="INFINITE">
-                            
-                            <KeyFrame Cue="0%">
-                                <Setter Property="Margin" Value="0,0,0,0"/>
-                            </KeyFrame>
-                            
-                            <KeyFrame Cue="25%">
-                                <Setter Property="Margin" Value="200,0,0,0"/>
-                            </KeyFrame>
+    
+    <Panel Background="Green">
+        <Viewbox>
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,0,0">
+                <Rectangle Margin="20" Grid.Column="0" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="1" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="2" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="3" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <Rectangle Margin="20" Grid.Column="0" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="1" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="2" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="3" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="20,0,0,0">
+                <Rectangle Margin="20" Grid.Column="0" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="1" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="2" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="3" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+            </StackPanel>
+            
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <Rectangle Margin="20" Grid.Column="0" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="1" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="2" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+                <Rectangle Margin="20" Grid.Column="3" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
+            </StackPanel>
+            
+            
 
-                            <KeyFrame Cue="50%">
-                                <Setter Property="Margin" Value="200,200, 0,0"/>
-                            </KeyFrame>
-                            
-                            <KeyFrame Cue="75%">
-                                <Setter Property="Margin" Value="0,200,0,0"/>
-                            </KeyFrame>
-                            
-                            <KeyFrame Cue="100%">
-                                <Setter Property="Margin" Value="0,0,0,0"/>
-                            </KeyFrame>
-                            
-                        </Animation>
-                    </Style.Animations>
-                </Style>
-            </Panel.Styles>
-        
-        <ToggleButton DockPanel.Dock="Right" Background="Fuchsia" IsChecked="{Binding AnimationOn}" Content="klicka för $$$"/>
-    </DockPanel>
+            
+        </Grid>
+            
+        </Viewbox>
+    </Panel>
+    
+
 
 
     
