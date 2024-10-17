@@ -16,7 +16,7 @@
     </Design.DataContext>
 
     <Panel>
-        <Viewbox Stretch="Uniform" VerticalAlignment="Center">
+        <Viewbox VerticalAlignment="Center" HorizontalAlignment="Stretch">
             <StackPanel Background="Fuchsia" Orientation="Horizontal" VerticalAlignment="Top">
                 <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20" />
                 <DockPanel Background="Blue" Width="150" Height="150" VerticalAlignment="Center" Margin="20" />
@@ -25,17 +25,22 @@
                 <DockPanel Background="Blue" Width="120" Height="120" VerticalAlignment="Center" Margin="20" />
             </StackPanel>
         </Viewbox>
-
-
-        <Border HorizontalAlignment="Stretch">
-            <Viewbox HorizontalAlignment="Left" Width="NaN">
-                <Grid Margin="0,0,0,0" ColumnDefinitions="Auto, *"
+        
+            <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Grid Margin="0,40,0,0" ColumnDefinitions="Auto, *"
                   RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+                    
+                    
+                    <!--den här krävs för att controller listan ska vara justerad rätt. sämsta möjliga lösningen att få det att fungera, men det fungerar.
+                        snälla ändra och gör det rätt om du vet hur-->
+                    
+                    <Border Grid.Row="0" Grid.Column="1" Width="760"></Border>
+                    
                     <Rectangle
                     Grid.Column="0"
                     Grid.Row="0"
                     Height="40"
-                    Width="40"
+                    Width=""
                     Fill="LightGray" />
                 <Image
                     Grid.Column="0"
@@ -83,9 +88,7 @@
                     Points="0,0 40,0 0,120"
                     Stroke="Black" />
             </Grid>
-            
         </Viewbox>
-        </Border>
         
 
 

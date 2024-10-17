@@ -70,10 +70,9 @@
                     Fill="Black"
                     Points="0,0 80,0 0,40"
                     Stroke="Black" />
-                <Rectangle
+                <Border
                     Grid.Row="0" Grid.Column="6"
-                    Width="160"
-                    Fill="White" />
+                    Width="160"/>
                 <Polygon
                     Grid.Row="0" Grid.Column="7"
                     Fill="Black"
