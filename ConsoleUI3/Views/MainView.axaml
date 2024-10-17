@@ -26,6 +26,97 @@
         <!--Menyn dockad längst upp-->
         <ContentControl Content="{Binding CurrentViewModel}" />
         
+        
+        <Viewbox VerticalAlignment="Top">
+            <Grid ColumnDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto"
+				  RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto">
+                <Rectangle
+                    Grid.Column="0"
+					Grid.Row="0"
+                    Width="40"
+                    Fill="LightGray" />
+                <Rectangle Grid.Row="0" Grid.Column="1" Fill="DarkGray" />
+                <Image
+                    Grid.Row="0" Grid.Column="1"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/house-icon.png" />
+                <Rectangle
+                    Grid.Row="0" Grid.Column="2"
+                    Width="80"
+                    Fill="DarkGray" />
+                <Viewbox Grid.Row="0" Grid.Column="2" Width="80">
+                    <TextBlock Background="DarkGray" TextWrapping="Wrap">
+                        Home
+                    </TextBlock>
+                </Viewbox>
+                <TextBlock
+                    Grid.Row="0" Grid.Column="3"
+                    Width="40"
+                    Background="Black"
+                    Foreground="White">
+                    boxes
+                </TextBlock>
+                <Rectangle
+                    Grid.Row="0" Grid.Column="4"
+                    Width="40"
+                    Fill="DarkGray" />
+                <Image
+                    Grid.Row="0" Grid.Column="4"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/gear-icon-2048x2048-5lk2g86a.png" />
+
+                <Polygon
+                    Grid.Row="0" Grid.Column="5"
+                    Fill="Black"
+                    Points="0,0 80,0 0,40"
+                    Stroke="Black" />
+                <Rectangle
+                    Grid.Row="0" Grid.Column="6"
+                    Width="160"
+                    Fill="White" />
+                <Polygon
+                    Grid.Row="0" Grid.Column="7"
+                    Fill="Black"
+                    Points="0,0 80,0 80,40"
+                    Stroke="Black" />
+                <Rectangle
+                    Grid.Row="0" Grid.Column="8"
+                    Width="40"
+                    Fill="DarkGray" />
+                <Image
+                    Grid.Row="0" Grid.Column="8"
+                    Width="40"
+                    Source="avares://ConsoleUI3/Assets/wifi-logo.png" />
+                <TextBlock
+                    Grid.Row="0" Grid.Column="9"
+                    Width="80"
+                    Background="Black"
+                    Foreground="White">
+                    clock
+                </TextBlock>
+                <TextBlock
+                    Grid.Row="0" Grid.Column="10"
+                    Width="80"
+                    Background="DarkGray">
+                    volume
+                </TextBlock>
+                <Rectangle
+                    Grid.Row="0" Grid.Column="11"
+                    Width="40"
+                    Fill="LightGray" />
+				<Polygon
+                    Grid.Column="11"
+					Grid.Row="1"
+					Grid.RowSpan="2"
+                    Fill="LightGray"
+                    Points="0,0 40,80 40,0"
+                    Stroke="Black" />
+            </Grid>
+        </Viewbox>
+        
+        
+        
+        
         <Viewbox VerticalAlignment="Bottom" Stretch="None">
             <Label Content='Exempel på control som alltid visas oavsätt "meny"' Background='Fuchsia'/>
         </Viewbox>
