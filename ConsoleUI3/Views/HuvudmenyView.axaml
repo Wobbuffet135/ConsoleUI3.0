@@ -32,8 +32,43 @@
 			<ListBox
 				Height="160"
 				Width="800"
-				Background="Fuchsia">
-				
+				Background="Fuchsia"
+				>
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Orientation="Horizontal"/>
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
 				<ListBoxItem>
 					<DockPanel
 						Background="Blue"
