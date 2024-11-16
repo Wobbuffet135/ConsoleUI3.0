@@ -27,16 +27,24 @@
             </StackPanel>
         </Viewbox>
         -->
-		
-		<Viewbox VerticalAlignment="Center" HorizontalAlignment="Stretch">
+		<Viewbox>
+		<Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="160" Width="800">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="800"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="160"/>
+			</Grid.RowDefinitions>
 			<ListBox
-				Height="160"
-				Width="800"
 				Background="Fuchsia"
-				>
+				Grid.Column="0"
+				Grid.Row="0"
+				Width="800">
 				<ListBox.ItemsPanel>
 					<ItemsPanelTemplate>
-						<StackPanel Orientation="Horizontal"/>
+						<StackPanel Orientation="Horizontal"
+									VerticalAlignment="Center"
+									HorizontalAlignment="Center"/>
 					</ItemsPanelTemplate>
 				</ListBox.ItemsPanel>
 				<ListBoxItem>
@@ -75,7 +83,44 @@
 						Width="120"
 						Height="120"/>
 				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
+				<ListBoxItem>
+					<DockPanel
+						Background="Blue"
+						Width="120"
+						Height="120"/>
+				</ListBoxItem>
 			</ListBox>
+		</Grid>
 		</Viewbox>
             <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left">
                 <Grid Margin="0,40,0,0" ColumnDefinitions="Auto, *"
