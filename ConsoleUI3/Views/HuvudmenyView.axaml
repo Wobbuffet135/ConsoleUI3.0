@@ -39,7 +39,8 @@
 				Background="Fuchsia"
 				Grid.Column="0"
 				Grid.Row="0"
-				Width="800">
+				Width="800"
+				ScrollViewer.HorizontalScrollBarVisibility="Hidden">
 				<ListBox.ItemsPanel>
 					<ItemsPanelTemplate>
 						<StackPanel Orientation="Horizontal"
@@ -73,7 +74,7 @@
 				</ListBoxItem>
 				<ListBoxItem>
 					<DockPanel
-						Background="Blue"
+						Background="Red"
 						Width="120"
 						Height="120"/>
 				</ListBoxItem>
@@ -109,7 +110,7 @@
 				</ListBoxItem>
 				<ListBoxItem>
 					<DockPanel
-						Background="Blue"
+						Background="Green"
 						Width="120"
 						Height="120"/>
 				</ListBoxItem>
