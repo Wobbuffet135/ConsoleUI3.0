@@ -28,17 +28,10 @@
         </Viewbox>
         -->
 		<Viewbox>
-		<Grid VerticalAlignment="Center" HorizontalAlignment="Left" Height="160" Width="800">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="800"/>
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="160"/>
-			</Grid.RowDefinitions>
 			<ListBox
+                ItemsSource="{Binding MainMenuList}"
+                SelectedIndex="{Binding MainSelectedItemIndex}"
 				Background="Fuchsia"
-				Grid.Column="0"
-				Grid.Row="0"
 				Width="800"
 				ScrollViewer.HorizontalScrollBarVisibility="Hidden">
 				<ListBox.ItemsPanel>
@@ -48,80 +41,8 @@
 									HorizontalAlignment="Center"/>
 					</ItemsPanelTemplate>
 				</ListBox.ItemsPanel>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Red"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Green"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
-				<ListBoxItem>
-					<DockPanel
-						Background="Blue"
-						Width="120"
-						Height="120"/>
-				</ListBoxItem>
+                
 			</ListBox>
-		</Grid>
 		</Viewbox>
             <Viewbox VerticalAlignment="Top" HorizontalAlignment="Left">
                 <Grid Margin="0,40,0,0" ColumnDefinitions="Auto, *"
