@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
     xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
-    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="440"
     x:DataType="vm:TestViewModel">
     
     <Design.DataContext>
@@ -19,7 +19,9 @@
     
     
     <Panel Background="Green">
-        <Viewbox>
+        <Viewbox
+			VerticalAlignment="Top">
+			<!--
             <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,0,0">
                 <Rectangle Margin="20" Grid.Column="0" Fill="Fuchsia" Height="100" Width="100"></Rectangle>
@@ -53,8 +55,32 @@
 
             
         </Grid>
-            
-        </Viewbox>
+            -->
+			<ListBox
+				ItemsSource="{Binding AllGamesList}"
+				Width="700"
+				Margin="100"
+				Background="Fuchsia">
+				<ListBox.ItemsPanel>
+					<ItemsPanelTemplate>
+						<WrapPanel 
+									VerticalAlignment="Top"
+									HorizontalAlignment="Center"/>
+					</ItemsPanelTemplate>
+				</ListBox.ItemsPanel>
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Panel
+							Height="100"
+							Width="100">
+							<TextBlock 
+								Text="{Binding}"
+								VerticalAlignment="Center"/>
+						</Panel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+	</Viewbox>
     </Panel>
     
 
