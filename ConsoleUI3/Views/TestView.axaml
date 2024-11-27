@@ -20,7 +20,8 @@
     
     <Panel Background="Green">
         <Viewbox
-			VerticalAlignment="Top">
+			VerticalAlignment="Top"
+			Margin="100">
 			<!--
             <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="Auto, Auto, Auto, Auto" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0,0,0">
@@ -59,7 +60,6 @@
 			<ListBox
 				ItemsSource="{Binding AllGamesList}"
 				Width="700"
-				Margin="100"
 				Background="Fuchsia">
 				<ListBox.ItemsPanel>
 					<ItemsPanelTemplate>
@@ -74,8 +74,9 @@
 							Height="100"
 							Width="100">
 							<TextBlock 
-								Text="{Binding}"
-								VerticalAlignment="Center"/>
+								Text="{Binding Name}"
+								VerticalAlignment="Center"
+								HorizontalAlignment="Center"/>
 						</Panel>
 					</DataTemplate>
 				</ListBox.ItemTemplate>
