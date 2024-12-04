@@ -7,7 +7,8 @@
     xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
     xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="440"
-    x:DataType="vm:TestViewModel">
+    x:DataType="vm:TestViewModel"
+	XYFocus.NavigationModes="Enabled">
     
     <Design.DataContext>
         <!--

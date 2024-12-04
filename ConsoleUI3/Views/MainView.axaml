@@ -8,7 +8,8 @@
     d:DesignHeight="440"
     d:DesignWidth="800"
     x:DataType="vm:MainViewModel"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+	XYFocus.NavigationModes="Enabled">
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,

@@ -6,7 +6,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConsoleUI3.ViewModels"
     mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="440"
-    x:DataType="vm:HuvudmenyViewModel">
+    x:DataType="vm:HuvudmenyViewModel"
+	XYFocus.NavigationModes="Enabled">
     <Design.DataContext>
         <!--
             This only sets the DataContext for the previewer in an IDE,
